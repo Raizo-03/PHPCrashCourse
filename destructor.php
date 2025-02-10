@@ -6,32 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-
+    
 
 <?php
-    //Class
-
     class Fruit{
         public $name;
         public $color;
 
-
-        function set_name($name){
+         function __construct($name,$color){
             $this->name = $name;
-        }
-
-        function get_name(){
-            return $this->name;
+            $this->color = $color;
         }
 
 
-
+        function __destruct(){
+            echo "The fruit is {$this->name} and the color is {$this->color}";
+        }
     }
 
 
-    
 
-?>
+
+    $strawberry = new Fruit("Strawber", "Red");
+    echo "<br>";
     
+?>
 </body>
 </html>
